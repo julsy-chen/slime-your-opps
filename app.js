@@ -2,14 +2,14 @@ let followersSet = null;   // Set of usernames, current
 let followingSet = null;   // Set of usernames, current
 let prevFollowersSet = null; // from loaded snapshot, or null
 
-// Messages that scroll through the eyebrow ticker at the top of the page.
-// Edit this list freely — the marquee rebuilds itself from whatever's here.
 const eyebrowMessages = [
-  'Local · runs entirely in this browser tab',
-  'No login, no automation — nothing leaves your device',
-  'Export from Instagram → compare → done'
+  'Analyzing who\'s scared of commitment',
+  'Loading receipts',
+  'Compiling your list of enemies',
+  'Nimbus, slime them',
+  'Knew you since Grade 9 but ok',
 ];
-
+ 
 function buildEyebrowMarquee(){
   const track = document.getElementById('eyebrow-track');
   if (!track) return;
