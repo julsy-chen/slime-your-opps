@@ -176,7 +176,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-fa
 }
 @keyframes star-blink{
   0%,100%{opacity:.5;}
-  50%{opacity:.9;}
+  50%{opacity:.95;}
 }
 @media (max-width:1040px){
   .stars-field{display:none;} /* not enough margin on small screens to hold them */

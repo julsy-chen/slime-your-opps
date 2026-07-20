@@ -6,7 +6,7 @@ const eyebrowMessages = [
   'Analyzing who\'s scared of commitment',
   'Loading receipts',
   'Compiling your list of enemies',
-  'Nimbus, slime them',
+  'Hey Nimbus, slime them',
   'Knew you since Grade 9 but ok',
 ];
  
