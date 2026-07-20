@@ -13,6 +13,8 @@
   --mono: 'IBM Plex Mono', monospace;
   --sans: 'Inter', sans-serif;
 }
+
+
 *{box-sizing:border-box;}
 body{
   margin:0;
@@ -150,7 +152,9 @@ button:not(:disabled):hover{filter:brightness(1.1);}
 .prefix{color:var(--muted);flex-shrink:0;}
 .empty{font-family:var(--mono);font-size:13px;color:var(--muted);padding:14px;border:1px dashed var(--line);border-radius:4px;}
 
-footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--muted);}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--star);}
+
+footer a{color:var(--star);text-decoration:underline;}
 
 */ Stars */
 .stars-field{
