@@ -341,11 +341,6 @@ function renderAll(){
   renderList('list-gained', lastGained, prevFollowersSet ? 'No new followers since your last snapshot.' : 'Load a previous snapshot (Step 3) to see this.');
 }
 
-document.getElementById('chk-avatars').addEventListener('change', (e) => {
-  showAvatars = e.target.checked;
-  renderAll();
-});
-
 document.getElementById('btn-compare').addEventListener('click', () => {
   if (!followersSet || !followingSet) return;
 
