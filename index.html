@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Follower Ledger</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="stars-field" id="stars-field" aria-hidden="true"></div>
+        <div class="wrap">
+            <header>
+                <div class="eyebrow-marquee">
+                    <div class="eyebrow-track" id="eyebrow-track"></div>
+                </div>
+                <h1>Follower Ledger</h1>
+                <div class="sub">
+                    Compares Instagram's own data export against a snapshot you saved last time, so you can see who unfollowed you and who doesn't follow you back &mdash; without logging in anywhere or automating your account. Nothing here is uploaded anywhere; every file stays on your machine.
+                </div>
+            </header>
+
+            <div class="card wide instructions" style="margin-bottom:28px;">
+                <strong>Getting your data from Instagram (do this each time you want to check):</strong>
+                <ol>
+                <li>Open Instagram &rarr; Settings &rarr; <strong>Accounts Center</strong> &rarr; Your information and permissions &rarr; <strong>Download your information</strong></li>
+                <li>Choose <strong>Some of your information</strong> &rarr; select ONLY <strong>Followers and following</strong></li>
+                <li>Set format to <strong>JSON</strong>, media quality to be <strong>Lower quality</strong>, submit, and wait for Instagram's email/notification with the download</li>
+                <li>Unzip the file &mdash; you'll find <code>followers_1.json</code> and <code>following.json</code> inside the connections folder</li>
+                </ol>
+            </div>
+
+            <div class="steps">
+                <div class="card">
+                    <div class="card-label"><span>Step 1 &middot; Current followers</span><span class="n" id="lbl-followers"></span></div>
+                    <label class="drop" id="drop-followers">
+                        <span id="drop-followers-text">Drop followers_1.json here, or click to choose</span>
+                        <input type="file" id="file-followers" accept=".json">
+                    </label>
+                </div>
+                <div class="card">
+                    <div class="card-label"><span>Step 2 &middot; Current following</span><span class="n" id="lbl-following"></span></div>
+                    <label class="drop" id="drop-following">
+                        <span id="drop-following-text">Drop following.json here, or click to choose</span>
+                        <input type="file" id="file-following" accept=".json">
+                    </label>
+                </div>
+                <div class="card wide">
+                    <div class="card-label"><span>Step 3 (optional) &middot; Previous snapshot</span><span class="n" id="lbl-snapshot"></span></div>
+                    <label class="drop" id="drop-snapshot">
+                        <span id="drop-snapshot-text">Drop the ledger-snapshot-*.json you saved last time &mdash; skip this on your very first run</span>
+                        <input type="file" id="file-snapshot" accept=".json">
+                    </label>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="primary" id="btn-compare" disabled>Compare</button>
+                <button id="btn-save" disabled>Save today's snapshot for next time</button>
+            </div>
+            
+            <div class="status" id="status"></div>
+
+            <div class="results" id="results" style="display:none;">
+
+                <div class="result-block">
+                    <div class="result-head">
+                        <div class="dot lost"></div>
+                        <div class="result-title">Unfollowed you</div>
+                        <div class="result-count" id="count-lost"></div>
+                    </div>
+                    <div id="list-lost"></div>
+                </div>
+
+                <div class="result-block">
+                    <div class="result-head">
+                        <div class="dot oneway"></div>
+                        <div class="result-title">You follow, they don't follow back</div>
+                        <div class="result-count" id="count-oneway"></div>
+                    </div>
+                    <div id="list-oneway"></div>
+                </div>
+
+                <div class="result-block">
+                    <div class="result-head">
+                        <div class="dot gained"></div>
+                        <div class="result-title">New followers since last check</div>
+                        <div class="result-count" id="count-gained"></div>
+                    </div>
+                    <div id="list-gained"></div>
+                </div>
+            </div>
+            
+            <footer>Made by <a href="https://github.com/julsy-chen" target="_blank" rel="noopener noreferrer">Julia Chen</a> &middot; <a href="https://github.com/julsy-chen/slime-your-opps" target="_blank" rel="noopener noreferrer">Source code</a></footer>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
