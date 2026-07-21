@@ -5,6 +5,7 @@ let prevFollowersSet = null; // from loaded snapshot, or null
 const eyebrowMessages = [
   'Analyzing who\'s scared of commitment',
   'Loading receipts',
+  'I promise I won\'t steal your data',
   'Compiling your list of enemies',
   'Hey Nimbus, slime them',
   'Knew you since Grade 9 but ok',
