@@ -121,7 +121,7 @@ button.primary{background:var(--text);color:var(--bg);border-color:var(--text);}
 button:disabled{opacity:.4;cursor:not-allowed;}
 button:not(:disabled):hover{filter:brightness(1.1);}
 
-.status{font-family:var(--mono);font-size:12px;color:var(--muted);margin:8px 0 32px;min-height:16px;}
+.status{font-family:var(--mono);font-size:12px;color:var(--muted);margin:8px 0;min-height:16px;}
 .status.err{color:var(--lost);}
 
 .results{margin-top:48px;}
@@ -152,7 +152,7 @@ button:not(:disabled):hover{filter:brightness(1.1);}
 .prefix{color:var(--muted);flex-shrink:0;}
 .empty{font-family:var(--mono);font-size:13px;color:var(--muted);padding:14px;border:1px dashed var(--line);border-radius:4px;}
 
-footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--star);}
+footer{padding-top:20px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--star);}
 
 footer a{color:var(--star);text-decoration:underline;}
 
